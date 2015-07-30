@@ -1,0 +1,919 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "49408015ca7a793b537a810c475c5cc0",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "fastd/asset-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/asset-bundle.git",
+                "reference": "6e57b918199e05d32e069497ca5a410018abee1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/asset-bundle/zipball/6e57b918199e05d32e069497ca5a410018abee1c",
+                "reference": "6e57b918199e05d32e069497ca5a410018abee1c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "fastd/fastd-module": "0.1.x-dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "Fastd media module.",
+            "time": "2015-07-26 07:01:32"
+        },
+        {
+            "name": "fastd/config",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/config.git",
+                "reference": "bfed962b51df3eb9aeca5f95c5cedd035cf6a6c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/config/zipball/bfed962b51df3eb9aeca5f95c5cedd035cf6a6c3",
+                "reference": "bfed962b51df3eb9aeca5f95c5cedd035cf6a6c3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD config component",
+            "keywords": [
+                "FastD",
+                "config"
+            ],
+            "time": "2015-06-21 02:17:59"
+        },
+        {
+            "name": "fastd/console",
+            "version": "v0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/console.git",
+                "reference": "8042dede061e7d491675c40609fb880bd2f7c118"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/console/zipball/8042dede061e7d491675c40609fb880bd2f7c118",
+                "reference": "8042dede061e7d491675c40609fb880bd2f7c118",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "fastd/container": "dev-master"
+            },
+            "bin": [
+                "bin/console"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD console component",
+            "keywords": [
+                "FastD",
+                "console"
+            ],
+            "time": "2015-07-23 01:31:05"
+        },
+        {
+            "name": "fastd/container",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/container.git",
+                "reference": "bc5b9aad31f23bd3a6422a3e7e387abdca21ad0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/container/zipball/bc5b9aad31f23bd3a6422a3e7e387abdca21ad0c",
+                "reference": "bc5b9aad31f23bd3a6422a3e7e387abdca21ad0c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD container component",
+            "keywords": [
+                "FastD",
+                "container"
+            ],
+            "time": "2015-07-17 17:43:33"
+        },
+        {
+            "name": "fastd/database",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/database.git",
+                "reference": "a91862c6b4404556625b21177a10fd713089cc62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/database/zipball/a91862c6b4404556625b21177a10fd713089cc62",
+                "reference": "a91862c6b4404556625b21177a10fd713089cc62",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD php simple framework database driver component",
+            "keywords": [
+                "FastD",
+                "database"
+            ],
+            "time": "2015-07-14 06:28:03"
+        },
+        {
+            "name": "fastd/debug",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/debug.git",
+                "reference": "a361b10afec7f93c991f3f5cf725c6baa509661b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/debug/zipball/a361b10afec7f93c991f3f5cf725c6baa509661b",
+                "reference": "a361b10afec7f93c991f3f5cf725c6baa509661b",
+                "shasum": ""
+            },
+            "require": {
+                "maximebf/debugbar": ">=1.0.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "fastd/logger": "dev-dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "exception handle component.",
+            "keywords": [
+                "FastD",
+                "exception"
+            ],
+            "time": "2015-07-24 03:49:37"
+        },
+        {
+            "name": "fastd/fastd-module",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/fast-module.git",
+                "reference": "348f00bfab70ce2b36b54b3e21892f30ada520b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/fast-module/zipball/348f00bfab70ce2b36b54b3e21892f30ada520b3",
+                "reference": "348f00bfab70ce2b36b54b3e21892f30ada520b3",
+                "shasum": ""
+            },
+            "require": {
+                "fastd/framework": "~1.0.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "": "src/",
+                    "Module\\": "module"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "The fastd module framework.",
+            "keywords": [
+                "module develop framework."
+            ],
+            "time": "2015-07-26 05:16:30"
+        },
+        {
+            "name": "fastd/finder",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/finder.git",
+                "reference": "d683b7be7f97300c2051d637773a16ff150084c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/finder/zipball/d683b7be7f97300c2051d637773a16ff150084c7",
+                "reference": "d683b7be7f97300c2051d637773a16ff150084c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD finder component",
+            "keywords": [
+                "FastD",
+                "finder"
+            ],
+            "time": "2015-07-20 02:11:51"
+        },
+        {
+            "name": "fastd/framework",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/framework.git",
+                "reference": "5900100575f652dd7f5ee7115daadd272db573a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/framework/zipball/5900100575f652dd7f5ee7115daadd272db573a1",
+                "reference": "5900100575f652dd7f5ee7115daadd272db573a1",
+                "shasum": ""
+            },
+            "require": {
+                "fastd/config": "~0.1.0",
+                "fastd/console": "~0.1.2",
+                "fastd/container": "~0.1.1",
+                "fastd/database": "~0.1.2",
+                "fastd/debug": "~0.1.0",
+                "fastd/finder": "~0.1.0",
+                "fastd/http": "~0.1.0",
+                "fastd/logger": "~0.1.0",
+                "fastd/routing": "~0.1.1",
+                "fastd/storage": "~0.1.0",
+                "fastd/template": "~0.1.0",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "fastd/fastd-module": "dev-dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "The fastd framework library.",
+            "keywords": [
+                "FastD",
+                "FastD Bootstrap",
+                "FastD Module",
+                "FastD framework"
+            ],
+            "time": "2015-07-26 05:08:07"
+        },
+        {
+            "name": "fastd/http",
+            "version": "v0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/http.git",
+                "reference": "4dc2b741c778f5fc9efe251b1b9ceac8f4891ed4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/http/zipball/4dc2b741c778f5fc9efe251b1b9ceac8f4891ed4",
+                "reference": "4dc2b741c778f5fc9efe251b1b9ceac8f4891ed4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD simple http component.",
+            "keywords": [
+                "FastD",
+                "http",
+                "protocol"
+            ],
+            "time": "2015-07-28 09:19:36"
+        },
+        {
+            "name": "fastd/logger",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/logger.git",
+                "reference": "52144ac3fece78c334c35720ff66eae3e0669ad2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/logger/zipball/52144ac3fece78c334c35720ff66eae3e0669ad2",
+                "reference": "52144ac3fece78c334c35720ff66eae3e0669ad2",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "1.12.*@dev",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "logger component",
+            "keywords": [
+                "FastD",
+                "logger"
+            ],
+            "time": "2015-06-30 07:40:15"
+        },
+        {
+            "name": "fastd/routing",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/routing.git",
+                "reference": "c2c3a82da07b6728635b29eb7038842326ccf927"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/routing/zipball/c2c3a82da07b6728635b29eb7038842326ccf927",
+                "reference": "c2c3a82da07b6728635b29eb7038842326ccf927",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/FastD/Routing/Routes.php"
+                ],
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD routing component",
+            "keywords": [
+                "FastD framework",
+                "route",
+                "router",
+                "routing"
+            ],
+            "time": "2015-07-17 17:15:42"
+        },
+        {
+            "name": "fastd/storage",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/storage.git",
+                "reference": "c09f63dc0c0c933ca3e22819b8dcb93374a3e3a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/storage/zipball/c09f63dc0c0c933ca3e22819b8dcb93374a3e3a3",
+                "reference": "c09f63dc0c0c933ca3e22819b8dcb93374a3e3a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD php simple framework Storage Component",
+            "keywords": [
+                "FastD",
+                "storage"
+            ],
+            "time": "2015-06-21 08:59:20"
+        },
+        {
+            "name": "fastd/template",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/template.git",
+                "reference": "b8fbe4ff7b9151ed9347b77d9c6e307a7e13ae47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/template/zipball/b8fbe4ff7b9151ed9347b77d9c6e307a7e13ae47",
+                "reference": "b8fbe4ff7b9151ed9347b77d9c6e307a7e13ae47",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "keywords": [
+                "FastD",
+                "template",
+                "templating",
+                "twig"
+            ],
+            "time": "2015-07-26 06:49:26"
+        },
+        {
+            "name": "maximebf/debugbar",
+            "version": "v1.10.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maximebf/php-debugbar.git",
+                "reference": "7b2006e6e095126b5a061ec33fca3d90ea8a8219"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/7b2006e6e095126b5a061ec33fca3d90ea8a8219",
+                "reference": "7b2006e6e095126b5a061ec33fca3d90ea8a8219",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0",
+                "symfony/var-dumper": "~2.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "kriswallsmith/assetic": "The best way to manage assets",
+                "monolog/monolog": "Log using Monolog",
+                "predis/predis": "Redis storage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.10-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "DebugBar": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxime Bouroumeau-Fuseau",
+                    "email": "maxime.bouroumeau@gmail.com",
+                    "homepage": "http://maximebf.com"
+                }
+            ],
+            "description": "Debug bar in the browser for php application",
+            "homepage": "https://github.com/maximebf/php-debugbar",
+            "keywords": [
+                "debug"
+            ],
+            "time": "2015-02-05 07:51:20"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "1fbe8c2641f2b163addf49cc5e18f144bec6b19f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1fbe8c2641f2b163addf49cc5e18f144bec6b19f",
+                "reference": "1fbe8c2641f2b163addf49cc5e18f144bec6b19f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "phpunit/phpunit": "~4.0",
+                "raven/raven": "~0.5",
+                "ruflin/elastica": "0.90.*",
+                "videlalvaro/php-amqplib": "~2.4"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "videlalvaro/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.12.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2014-12-29 21:29:35"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Psr\\Log\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v2.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "fde603d9f4b2418ff0f0315b93eb039c9aa41205"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/fde603d9f4b2418ff0f0315b93eb039c9aa41205",
+                "reference": "fde603d9f4b2418ff0f0315b93eb039c9aa41205",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "suggest": {
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2015-07-01 12:07:40"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.18.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e8e6575abf6102af53ec283f7f14b89e304fa602",
+                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2015-06-06 23:31:24"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "fastd/fastd-module": 20,
+        "fastd/asset-bundle": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.4"
+    },
+    "platform-dev": []
+}

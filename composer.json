@@ -1,0 +1,22 @@
+{
+    "name": "fastd/admin-bundle",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "fastd/fastd-module": "0.1.x-dev",
+        "fastd/asset-bundle": "0.1.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": "Module\\Module::init",
+        "post-install-cmd": "Module\\Module::init",
+        "post-create-project-cmd": "Module\\Module::init"
+    }
+}
