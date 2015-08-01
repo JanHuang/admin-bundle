@@ -38,7 +38,7 @@ class Login extends TemplateEvent
                     'msg' => 'Access denied.'
                 ], Response::HTTP_FORBIDDEN);
             }
-            return $this->redirect($this->generateUrl('dash_login'));
+            return $this->redirect($this->generateUrl('dash_admin__login'));
         }
         $managerRepository = $this->getConnection('read')->getRepository('Admin:Repository:Manager');
         $manager = $managerRepository->find(['OR' => ['username' => $account, 'email' => $account]]);
@@ -49,7 +49,7 @@ class Login extends TemplateEvent
                     'msg' => 'Access denied.'
                 ], Response::HTTP_FORBIDDEN);
             }
-            return $this->redirect($this->generateUrl('dash_login'));
+            return $this->redirect($this->generateUrl('dash_admin__login'));
         }
         $signature = new Signature();
         $sign = $signature->makeMd5Password($manager['username'], $passwrod, $manager['salt']);
@@ -60,11 +60,11 @@ class Login extends TemplateEvent
                     'msg' => 'Manger authorization fail.'
                 ], Response::HTTP_FORBIDDEN);
             }
-            return $this->redirect($this->generateUrl('dash_login'));
+            return $this->redirect($this->generateUrl('dash_admin__login'));
         }
         unset($manager['pwd']);
         $request->setSession('manager', $manager);
-        $redirectUrl = $request->request->hasGet('redirect_url', $this->generateUrl('dash_login'));
+        $redirectUrl = $request->request->hasGet('redirect_url', $this->generateUrl('dash_admin__login'));
         if ($request->isXmlHttpRequest()) {
             return new JsonResponse(['redirect_url' => $redirectUrl]);
         }

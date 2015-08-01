@@ -62,7 +62,7 @@ class MakeUser extends Command
 
     public function getSalt(Input $input)
     {
-        $pwd = $input->getParameterOption('pwd');
+        $pwd = $input->getParameterOption('salt');
         if (!empty($pwd)) {
             return $pwd;
         }

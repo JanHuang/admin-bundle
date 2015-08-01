@@ -30,7 +30,7 @@ class Logout extends DashAuthorization
                     'msg' => 'Operation fail.'
                 ], Response::HTTP_BAD_REQUEST);
             }
-            return $this->redirect($this->generateUrl('dash_board'));
+            return $this->redirect($this->generateUrl('dash_admin_board'));
         }
 
         if ($request->isXmlHttpRequest()) {
@@ -38,6 +38,6 @@ class Logout extends DashAuthorization
                 'msg' => 'ok'
             ]);
         }
-        return $this->redirect($this->generateUrl('dash_login'));
+        return $this->redirect($this->generateUrl('dash_admin__login'));
     }
 }
