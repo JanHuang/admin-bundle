@@ -49,7 +49,7 @@
           <!-- Login Panel/Form -->
           <div class="panel mt30 mb25">
 
-            <form method="post" action="{{ url('dash_sign_in') }}" id="contact">
+            <form method="post" action="{{ url('dash_admin_sign_in') }}" id="contact">
               <div class="panel-body bg-light p25 pb15">
 
                 <!-- Username Input -->
@@ -76,7 +76,7 @@
               </div>
 
               <div class="panel-footer clearfix">
-                <input type="hidden" name="redirect_url" value="{{ url('dash_board') }}">
+                <input type="hidden" name="redirect_url" value="{{ url('dash_admin_board') }}">
                 <button type="submit" class="button btn-primary mr10 pull-right">Sign In</button>
                 <label class="switch ib switch-primary mt10">
                   <input type="checkbox" name="remember" id="remember" checked>

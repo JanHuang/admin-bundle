@@ -586,7 +586,7 @@
                   <span class="fa fa-bell"></span> Notifications </a>
               </li>
               <li class="list-group-item">
-                <a href="{{ url('dash_logout') }}" class="animated animated-short fadeInUp">
+                <a href="{{ url('dash_admin_logout') }}" class="animated animated-short fadeInUp">
                   <span class="fa fa-bell"></span> Logout </a>
               </li>
           </ul>
@@ -612,7 +612,7 @@
               </a>
               <div class="media-body">
                 <div class="media-links">
-                   <a href="javascript:void(0);" class="media-author" style="color: #fff; font-weight: bold; font-size: 14px;">{{ user.nickname | default('Anonymity') }} -</a> <a href="{{ url('dash_logout') }}">注销登陆</a>
+                   <a href="javascript:void(0);" class="media-author" style="color: #fff; font-weight: bold; font-size: 14px;">{{ user.nickname | default('Anonymity') }} -</a> <a href="{{ url('dash_admin_logout') }}">注销登陆</a>
                 </div>
               </div>
             </div>
