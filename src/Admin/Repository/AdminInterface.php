@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: janhuang
- * Date: 15/7/30
- * Time: 下午11:41
+ * Date: 15/8/17
+ * Time: 下午10:13
  * Github: https://www.github.com/janhuang
  * Coding: https://www.coding.net/janhuang
  * SegmentFault: http://segmentfault.com/u/janhuang
@@ -14,9 +14,17 @@
 
 namespace Admin\Repository;
 
-use FastD\Database\Repository\Repository;
-
-class ManagerRepository extends Repository
+interface AdminInterface
 {
+    public function getUser();
 
+    public function getUsernameField();
+
+    public function getEmailField();
+
+    public function getPasswordField();
+
+    public function getSaltField();
+
+    public function getRolesField();
 }

@@ -189,7 +189,7 @@
         },
         {
             "name": "fastd/database",
-            "version": "v0.2.2",
+            "version": "v0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/database.git",
@@ -370,16 +370,16 @@
         },
         {
             "name": "fastd/framework",
-            "version": "v1.3.2",
+            "version": "v1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/framework.git",
-                "reference": "6aa95dda2768b29303f8c21116861cdfa6ba2d1f"
+                "reference": "c4535a914d2088e95a3270596b89ecc8cbc26379"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/framework/zipball/6aa95dda2768b29303f8c21116861cdfa6ba2d1f",
-                "reference": "6aa95dda2768b29303f8c21116861cdfa6ba2d1f",
+                "url": "https://api.github.com/repos/JanHuang/framework/zipball/c4535a914d2088e95a3270596b89ecc8cbc26379",
+                "reference": "c4535a914d2088e95a3270596b89ecc8cbc26379",
                 "shasum": ""
             },
             "require": {
@@ -424,7 +424,7 @@
                 "FastD Module",
                 "FastD framework"
             ],
-            "time": "2015-08-16 07:42:37"
+            "time": "2015-08-17 07:05:01"
         },
         {
             "name": "fastd/http",

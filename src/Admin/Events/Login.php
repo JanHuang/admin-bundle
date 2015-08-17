@@ -14,6 +14,8 @@
 
 namespace Admin\Events;
 
+use Admin\Repository\AdminInterface;
+use Admin\Repository\UserRepositoryInterface;
 use Admin\Services\Signature;
 use FastD\Debug\Exceptions\ServerInternalErrorException;
 use FastD\Framework\Events\TemplateEvent;
@@ -23,22 +25,27 @@ use FastD\Http\Response;
 
 class Login extends TemplateEvent
 {
+    protected $account;
+
+    protected $password;
+
     public function loginAction()
     {
         return $this->render('Admin/Resources/views/login.twig');
     }
 
-    public function signInAction(Request $request)
+    protected function getAccount()
     {
-        try {
-            $redirectUrl = $this->generateUrl($this->getParameters('login.redirect_route'));
-        } catch (\Exception $e) {
-            if (!$request->request->has('redirect_url')) {
-                throw new ServerInternalErrorException('Login success redirect route name is unconfiguration.');
-            }
-            $redirectUrl = $request->request->get('redirect_url');
-        }
+        return $this->account;
+    }
 
+    protected function getPassword()
+    {
+        return $this->password;
+    }
+
+    protected function verifyAccountAndPassword(Request $request)
+    {
         $account = $request->request->hasGet('_account', null);
         $passwrod = $request->request->hasGet('_password', null);
         if (empty($account) || empty($passwrod)) {
@@ -50,8 +57,41 @@ class Login extends TemplateEvent
             }
             return $this->redirect($this->generateUrl('dash_admin_login'));
         }
-        $managerRepository = $this->getConnection('read')->getRepository('Admin:Repository:Manager');
-        $manager = $managerRepository->find(['OR' => ['username' => $account, 'email' => $account]]);
+
+        $this->account = $account;
+        $this->password = $passwrod;
+        unset($account, $passwrod);
+
+        return $this;
+    }
+
+    public function signInAction(Request $request, \FastD\Config\Config $config)
+    {
+        $this->verifyAccountAndPassword($request);
+
+        try {
+            try {
+                $redirectUrl = $this->generateUrl($this->getParameters('admin_bundle.redirect_url'));
+            } catch (\Exception $e) {
+                if (!$request->request->has('redirect_url')) {
+                    throw new ServerInternalErrorException('redirect_url unconfiguration.');
+                }
+                $redirectUrl = $request->request->get('redirect_url');
+            }
+            $repository = $this->getParameters('admin_bundle.repository');
+            $connection = $this->getParameters('admin_bundle.connection');
+            $managerRepository = $this->getConnection($connection)->getRepository($repository);
+            unset($repository, $connection);
+        } catch (\Exception $e) {
+            throw new ServerInternalErrorException('Admin bundle is unconfiguration. Parameters "redirect_url", "repository", "connection"');
+        }
+
+        if (!($managerRepository instanceof AdminInterface)) {
+            throw new ServerInternalErrorException('Repository implements extends "Admin\\Repository\\AdminInterface');
+        }
+
+        $manager = $managerRepository->find(['OR' => [$managerRepository->getUsernameField() => $this->getAccount(), $managerRepository->getEmailField() => $this->getAccount()]]);
+
         if (false == $manager) {
             if ($request->isXmlHttpRequest()) {
                 return new JsonResponse([
@@ -61,9 +101,10 @@ class Login extends TemplateEvent
             }
             return $this->redirect($this->generateUrl('dash_admin_login'));
         }
+
         $signature = new Signature();
-        $sign = $signature->makeMd5Password($manager['username'], $passwrod, $manager['salt']);
-        if ($sign !== $manager['pwd']) {
+        $sign = $signature->makeMd5Password($manager[$managerRepository->getUsernameField()], $this->getPassword(), $manager['salt']);
+        if ($sign !== $manager[$managerRepository->getPasswordField()]) {
             if ($request->isXmlHttpRequest()) {
                 return new JsonResponse([
                     'code' => 10087,
@@ -72,11 +113,13 @@ class Login extends TemplateEvent
             }
             return $this->redirect($this->generateUrl('dash_admin_login'));
         }
+
         unset($manager['pwd']);
         $request->setSession('manager', $manager);
         if ($request->isXmlHttpRequest()) {
             return new JsonResponse(['redirect_url' => $redirectUrl]);
         }
+
         return $this->redirect($redirectUrl);
     }
 }
