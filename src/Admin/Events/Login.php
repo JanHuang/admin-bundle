@@ -15,6 +15,7 @@
 namespace Admin\Events;
 
 use Admin\Services\Signature;
+use FastD\Debug\Exceptions\ServerInternalErrorException;
 use FastD\Framework\Events\TemplateEvent;
 use FastD\Http\JsonResponse;
 use FastD\Http\Request;
@@ -29,6 +30,15 @@ class Login extends TemplateEvent
 
     public function signInAction(Request $request)
     {
+        try {
+            $redirectUrl = $this->generateUrl($this->getParameters('login.redirect_route'));
+        } catch (\Exception $e) {
+            if (!$request->request->has('redirect_url')) {
+                throw new ServerInternalErrorException('Login success redirect route name is unconfiguration.');
+            }
+            $redirectUrl = $request->request->get('redirect_url');
+        }
+
         $account = $request->request->hasGet('_account', null);
         $passwrod = $request->request->hasGet('_password', null);
         if (empty($account) || empty($passwrod)) {
@@ -64,7 +74,6 @@ class Login extends TemplateEvent
         }
         unset($manager['pwd']);
         $request->setSession('manager', $manager);
-        $redirectUrl = $request->request->hasGet('redirect_url', $this->generateUrl('dash_admin_login'));
         if ($request->isXmlHttpRequest()) {
             return new JsonResponse(['redirect_url' => $redirectUrl]);
         }
