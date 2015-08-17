@@ -118,13 +118,21 @@ class MakeUser extends Command
             return 0;
         }
 
-        if ($managerRepository->insert([
+        $data = [
             $managerRepository->getUsernameField()  => $username,
             $managerRepository->getEmailField()     => $email,
             $managerRepository->getPasswordField()  => $password,
             $managerRepository->getSaltField()      => $salt,
             $managerRepository->getRolesField()     => '["ROLE_USER"]',
-        ])) {
+        ];
+
+        foreach ($data as $key => $value) {
+            if (empty($key)) {
+                unset($data[$key]);
+            }
+        }
+
+        if ($managerRepository->insert($data)) {
             $output->writeln($managerRepository->getUsernameField() . ': ' . $username, Output::STYLE_SUCCESS);
             $output->writeln($managerRepository->getPasswordField() . ': ' . $pwd, Output::STYLE_SUCCESS);
             $output->writeln($managerRepository->getEmailField() . ': ' . $email, Output::STYLE_SUCCESS);
