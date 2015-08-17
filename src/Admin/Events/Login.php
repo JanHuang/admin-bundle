@@ -14,7 +14,6 @@
 
 namespace Admin\Events;
 
-use Admin\Repository\AdminInterface;
 use Admin\Repository\UserRepositoryInterface;
 use Admin\Services\Signature;
 use FastD\Debug\Exceptions\ServerInternalErrorException;
@@ -65,7 +64,7 @@ class Login extends TemplateEvent
         return $this;
     }
 
-    public function signInAction(Request $request, \FastD\Config\Config $config)
+    public function signInAction(Request $request)
     {
         $this->verifyAccountAndPassword($request);
 
@@ -86,7 +85,7 @@ class Login extends TemplateEvent
             throw new ServerInternalErrorException('Admin bundle is unconfiguration. Parameters "redirect_url", "repository", "connection"');
         }
 
-        if (!($managerRepository instanceof AdminInterface)) {
+        if (!($managerRepository instanceof UserRepositoryInterface)) {
             throw new ServerInternalErrorException('Repository implements extends "Admin\\Repository\\AdminInterface');
         }
 

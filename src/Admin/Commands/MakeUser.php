@@ -14,7 +14,7 @@
 
 namespace Admin\Commands;
 
-use Admin\Repository\AdminInterface;
+use Admin\Repository\UserRepositoryInterface;
 use Admin\Services\Signature;
 use FastD\Console\Command;
 use FastD\Console\IO\Input;
@@ -104,8 +104,18 @@ class MakeUser extends Command
             throw new ServerInternalErrorException('Admin bundle is unconfiguration. Parameters "redirect_url", "repository", "connection"');
         }
 
-        if (!($managerRepository instanceof AdminInterface)) {
+        if (!($managerRepository instanceof UserRepositoryInterface)) {
             throw new ServerInternalErrorException('Repository implements extends "Admin\\Repository\\AdminInterface');
+        }
+
+        if (false != ($user = $managerRepository->getUser($username))) {
+            $output->writeln(sprintf('User "%s" is exists.', $user[$managerRepository->getUsernameField()]), Output::STYLE_BG_INFO);
+            $output->writeln($managerRepository->getUsernameField() . ': ' . $user[$managerRepository->getUsernameField()], Output::STYLE_SUCCESS);
+            $output->writeln($managerRepository->getPasswordField() . ': ' . $user[$managerRepository->getPasswordField()], Output::STYLE_SUCCESS);
+            $output->writeln($managerRepository->getEmailField() . ': ' . $user[$managerRepository->getEmailField()], Output::STYLE_SUCCESS);
+            $output->writeln($managerRepository->getSaltField() . ': ' . $user[$managerRepository->getSaltField()], Output::STYLE_SUCCESS);
+            $output->writeln($managerRepository->getRolesField() . ': ' . $user[$managerRepository->getRolesField()], Output::STYLE_SUCCESS);
+            return 0;
         }
 
         if ($managerRepository->insert([

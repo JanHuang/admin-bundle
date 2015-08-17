@@ -16,13 +16,13 @@ namespace Admin\Repository;
 
 use FastD\Database\Repository\Repository;
 
-class DemoRepository extends Repository implements AdminInterface
+class DemoRepository extends Repository implements UserRepositoryInterface
 {
     protected $table = 'fastd_manager';
 
-    public function getUser()
+    public function getUser($username)
     {
-        // TODO: Implement getUser() method.
+        return $this->find([$this->getUsernameField() => $username]);
     }
 
     public function getUsernameField()

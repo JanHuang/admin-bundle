@@ -14,9 +14,9 @@
 
 namespace Admin\Repository;
 
-interface AdminInterface
+interface UserRepositoryInterface
 {
-    public function getUser();
+    public function getUser($username);
 
     public function getUsernameField();
 
