@@ -19,7 +19,7 @@ use FastD\Http\JsonResponse;
 use FastD\Http\Request;
 use FastD\Http\Response;
 
-class DashAuthorization extends TemplateEvent
+class Authorization extends TemplateEvent
 {
     /**
      * @var Request

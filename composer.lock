@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4bd1d0e0f07d31743a64986b67a20b6b",
-    "packages": [],
-    "packages-dev": [
+    "hash": "efe7a41bcb0bffb2b8438dff51f58fb2",
+    "content-hash": "63a5e0f2107ce7e7ab44eb8b003786a9",
+    "packages": [
         {
             "name": "fastd/asset-bundle",
-            "version": "dev-master",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/asset-bundle.git",
-                "reference": "6e57b918199e05d32e069497ca5a410018abee1c"
+                "reference": "48f0bb70e0845fc9a15d2fcc6cd1bce703175936"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/asset-bundle/zipball/6e57b918199e05d32e069497ca5a410018abee1c",
-                "reference": "6e57b918199e05d32e069497ca5a410018abee1c",
+                "url": "https://api.github.com/repos/JanHuang/asset-bundle/zipball/48f0bb70e0845fc9a15d2fcc6cd1bce703175936",
+                "reference": "48f0bb70e0845fc9a15d2fcc6cd1bce703175936",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +30,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -49,24 +49,27 @@
                 }
             ],
             "description": "Fastd media module.",
-            "time": "2015-07-26 07:01:32"
-        },
+            "time": "2015-09-06 04:10:19"
+        }
+    ],
+    "packages-dev": [
         {
             "name": "fastd/config",
-            "version": "v0.2.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/config.git",
-                "reference": "bd8dbc7b70189c14a2de8d6b95bfdcc6df29be7c"
+                "reference": "f4065a85cac42318d0a4a4da4b44843f3b9c0a1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/config/zipball/bd8dbc7b70189c14a2de8d6b95bfdcc6df29be7c",
-                "reference": "bd8dbc7b70189c14a2de8d6b95bfdcc6df29be7c",
+                "url": "https://api.github.com/repos/JanHuang/config/zipball/f4065a85cac42318d0a4a4da4b44843f3b9c0a1a",
+                "reference": "f4065a85cac42318d0a4a4da4b44843f3b9c0a1a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4"
+                "php": ">=5.4",
+                "symfony/yaml": "~2.7.0"
             },
             "type": "library",
             "extra": {
@@ -94,7 +97,7 @@
                 "FastD",
                 "config"
             ],
-            "time": "2015-08-02 02:16:30"
+            "time": "2015-09-08 06:44:04"
         },
         {
             "name": "fastd/console",
@@ -189,16 +192,16 @@
         },
         {
             "name": "fastd/database",
-            "version": "v0.2.4",
+            "version": "v0.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/database.git",
-                "reference": "672fa184fb6c2d475b42449717582ed836478e21"
+                "reference": "e4e95daa8e90ddcb8f09ca7b589fb419a47ddb13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/database/zipball/672fa184fb6c2d475b42449717582ed836478e21",
-                "reference": "672fa184fb6c2d475b42449717582ed836478e21",
+                "url": "https://api.github.com/repos/JanHuang/database/zipball/e4e95daa8e90ddcb8f09ca7b589fb419a47ddb13",
+                "reference": "e4e95daa8e90ddcb8f09ca7b589fb419a47ddb13",
                 "shasum": ""
             },
             "require": {
@@ -230,20 +233,20 @@
                 "FastD",
                 "database"
             ],
-            "time": "2015-08-02 09:25:09"
+            "time": "2015-08-28 17:15:27"
         },
         {
             "name": "fastd/debug",
-            "version": "v1.0.2",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/debug.git",
-                "reference": "47d62b0a368ce7c0b774ad6e59f2baa1905ae7b2"
+                "reference": "e206e53132e15f3ff51996e9ab849f3a60266e92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/debug/zipball/47d62b0a368ce7c0b774ad6e59f2baa1905ae7b2",
-                "reference": "47d62b0a368ce7c0b774ad6e59f2baa1905ae7b2",
+                "url": "https://api.github.com/repos/JanHuang/debug/zipball/e206e53132e15f3ff51996e9ab849f3a60266e92",
+                "reference": "e206e53132e15f3ff51996e9ab849f3a60266e92",
                 "shasum": ""
             },
             "require": {
@@ -280,24 +283,24 @@
                 "debug",
                 "exception"
             ],
-            "time": "2015-08-14 06:42:10"
+            "time": "2015-08-26 13:25:21"
         },
         {
             "name": "fastd/fastd-module",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/fast-module.git",
-                "reference": "47ffd1131a501001699222d3e11c51231fc97c5b"
+                "reference": "ef85d48c899decf4d742c4475667a94d70fe84d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/fast-module/zipball/47ffd1131a501001699222d3e11c51231fc97c5b",
-                "reference": "47ffd1131a501001699222d3e11c51231fc97c5b",
+                "url": "https://api.github.com/repos/JanHuang/fast-module/zipball/ef85d48c899decf4d742c4475667a94d70fe84d6",
+                "reference": "ef85d48c899decf4d742c4475667a94d70fe84d6",
                 "shasum": ""
             },
             "require": {
-                "fastd/framework": "~1.3.0",
+                "fastd/framework": "~1.4.0",
                 "php": ">=5.4.0"
             },
             "type": "library",
@@ -326,24 +329,26 @@
             "keywords": [
                 "module develop framework."
             ],
-            "time": "2015-08-08 15:57:45"
+            "time": "2015-09-23 10:47:14"
         },
         {
             "name": "fastd/finder",
-            "version": "v0.1.0",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/finder.git",
-                "reference": "d683b7be7f97300c2051d637773a16ff150084c7"
+                "reference": "00b3d9fb65c1bff12de90df7d6c9dc03242c456c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/finder/zipball/d683b7be7f97300c2051d637773a16ff150084c7",
-                "reference": "d683b7be7f97300c2051d637773a16ff150084c7",
+                "url": "https://api.github.com/repos/JanHuang/finder/zipball/00b3d9fb65c1bff12de90df7d6c9dc03242c456c",
+                "reference": "00b3d9fb65c1bff12de90df7d6c9dc03242c456c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4"
+                "php": ">=5.4",
+                "symfony/filesystem": "~2.7.0",
+                "symfony/finder": "~2.7.0"
             },
             "type": "library",
             "autoload": {
@@ -366,30 +371,30 @@
                 "FastD",
                 "finder"
             ],
-            "time": "2015-07-20 02:11:51"
+            "time": "2015-09-10 06:46:56"
         },
         {
             "name": "fastd/framework",
-            "version": "v1.3.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/framework.git",
-                "reference": "c4535a914d2088e95a3270596b89ecc8cbc26379"
+                "reference": "c83ba07597abfa0d2f48807327e68829b4b2bbe9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/framework/zipball/c4535a914d2088e95a3270596b89ecc8cbc26379",
-                "reference": "c4535a914d2088e95a3270596b89ecc8cbc26379",
+                "url": "https://api.github.com/repos/JanHuang/framework/zipball/c83ba07597abfa0d2f48807327e68829b4b2bbe9",
+                "reference": "c83ba07597abfa0d2f48807327e68829b4b2bbe9",
                 "shasum": ""
             },
             "require": {
-                "fastd/config": "~0.2.0",
+                "fastd/config": "~1.0.0",
                 "fastd/console": "~0.1.3",
                 "fastd/container": "~0.1.1",
                 "fastd/database": "~0.2.0",
                 "fastd/debug": "~1.0.1",
-                "fastd/finder": "~0.1.0",
-                "fastd/http": "~0.1.0",
+                "fastd/finder": "~1.0.0",
+                "fastd/http": "~1.0.0",
                 "fastd/logger": "~0.1.0",
                 "fastd/routing": "~0.1.1",
                 "fastd/storage": "~0.1.0",
@@ -399,7 +404,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.4.x-dev"
                 }
             },
             "autoload": {
@@ -424,20 +429,20 @@
                 "FastD Module",
                 "FastD framework"
             ],
-            "time": "2015-08-17 07:05:01"
+            "time": "2015-10-23 05:27:49"
         },
         {
             "name": "fastd/http",
-            "version": "v0.1.5",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/http.git",
-                "reference": "4dc2b741c778f5fc9efe251b1b9ceac8f4891ed4"
+                "reference": "2099b6af5e701718de6ed8564d085fe2fab760f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/http/zipball/4dc2b741c778f5fc9efe251b1b9ceac8f4891ed4",
-                "reference": "4dc2b741c778f5fc9efe251b1b9ceac8f4891ed4",
+                "url": "https://api.github.com/repos/JanHuang/http/zipball/2099b6af5e701718de6ed8564d085fe2fab760f1",
+                "reference": "2099b6af5e701718de6ed8564d085fe2fab760f1",
                 "shasum": ""
             },
             "require": {
@@ -465,7 +470,7 @@
                 "http",
                 "protocol"
             ],
-            "time": "2015-07-28 09:19:36"
+            "time": "2015-09-23 08:33:37"
         },
         {
             "name": "fastd/logger",
@@ -510,22 +515,28 @@
         },
         {
             "name": "fastd/routing",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/routing.git",
-                "reference": "c2c3a82da07b6728635b29eb7038842326ccf927"
+                "reference": "b4f8af80025c1d50cb3191fda56a65843d2f2ad8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/routing/zipball/c2c3a82da07b6728635b29eb7038842326ccf927",
-                "reference": "c2c3a82da07b6728635b29eb7038842326ccf927",
+                "url": "https://api.github.com/repos/JanHuang/routing/zipball/b4f8af80025c1d50cb3191fda56a65843d2f2ad8",
+                "reference": "b4f8af80025c1d50cb3191fda56a65843d2f2ad8",
                 "shasum": ""
             },
             "require": {
+                "fastd/debug": "~1.0.1",
                 "php": ">=5.4"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "files": [
                     "src/FastD/Routing/Routes.php"
@@ -551,20 +562,20 @@
                 "router",
                 "routing"
             ],
-            "time": "2015-07-17 17:15:42"
+            "time": "2015-08-20 03:44:53"
         },
         {
             "name": "fastd/storage",
-            "version": "v0.1.0",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/storage.git",
-                "reference": "c09f63dc0c0c933ca3e22819b8dcb93374a3e3a3"
+                "reference": "ec5eb2769a71e06d33d56df50620455279c9428c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/storage/zipball/c09f63dc0c0c933ca3e22819b8dcb93374a3e3a3",
-                "reference": "c09f63dc0c0c933ca3e22819b8dcb93374a3e3a3",
+                "url": "https://api.github.com/repos/JanHuang/storage/zipball/ec5eb2769a71e06d33d56df50620455279c9428c",
+                "reference": "ec5eb2769a71e06d33d56df50620455279c9428c",
                 "shasum": ""
             },
             "require": {
@@ -591,20 +602,20 @@
                 "FastD",
                 "storage"
             ],
-            "time": "2015-06-21 08:59:20"
+            "time": "2015-08-22 02:54:09"
         },
         {
             "name": "fastd/template",
-            "version": "v0.1.1",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/template.git",
-                "reference": "b8fbe4ff7b9151ed9347b77d9c6e307a7e13ae47"
+                "reference": "54ac886451d7f1c0ed74413acabbbe98d2adb385"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/template/zipball/b8fbe4ff7b9151ed9347b77d9c6e307a7e13ae47",
-                "reference": "b8fbe4ff7b9151ed9347b77d9c6e307a7e13ae47",
+                "url": "https://api.github.com/repos/JanHuang/template/zipball/54ac886451d7f1c0ed74413acabbbe98d2adb385",
+                "reference": "54ac886451d7f1c0ed74413acabbbe98d2adb385",
                 "shasum": ""
             },
             "require": {
@@ -632,20 +643,20 @@
                 "templating",
                 "twig"
             ],
-            "time": "2015-07-26 06:49:26"
+            "time": "2015-10-23 14:36:18"
         },
         {
             "name": "maximebf/debugbar",
-            "version": "v1.10.4",
+            "version": "v1.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maximebf/php-debugbar.git",
-                "reference": "7b2006e6e095126b5a061ec33fca3d90ea8a8219"
+                "reference": "30e53e8a28284b69dd223c9f5ee8957befd72636"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/7b2006e6e095126b5a061ec33fca3d90ea8a8219",
-                "reference": "7b2006e6e095126b5a061ec33fca3d90ea8a8219",
+                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/30e53e8a28284b69dd223c9f5ee8957befd72636",
+                "reference": "30e53e8a28284b69dd223c9f5ee8957befd72636",
                 "shasum": ""
             },
             "require": {
@@ -688,7 +699,7 @@
             "keywords": [
                 "debug"
             ],
-            "time": "2015-02-05 07:51:20"
+            "time": "2015-10-19 20:35:12"
         },
         {
             "name": "monolog/monolog",
@@ -801,24 +812,113 @@
             "time": "2012-12-21 11:40:51"
         },
         {
-            "name": "symfony/var-dumper",
-            "version": "v2.7.3",
+            "name": "symfony/filesystem",
+            "version": "v2.7.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "e8903ebba5eb019f5886ffce739ea9e3b7519579"
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "56fd6df73be859323ff97418d97edc1d756df6df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e8903ebba5eb019f5886ffce739ea9e3b7519579",
-                "reference": "e8903ebba5eb019f5886ffce739ea9e3b7519579",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/56fd6df73be859323ff97418d97edc1d756df6df",
+                "reference": "56fd6df73be859323ff97418d97edc1d756df6df",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-10-18 20:23:18"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v2.7.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "2ffb4e9598db3c48eb6d0ae73b04bbf09280c59d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/2ffb4e9598db3c48eb6d0ae73b04bbf09280c59d",
+                "reference": "2ffb4e9598db3c48eb6d0ae73b04bbf09280c59d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-10-11 09:39:48"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v2.7.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "eb033050050916b6bfa51be71009ef67b16046c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/eb033050050916b6bfa51be71009ef67b16046c9",
+                "reference": "eb033050050916b6bfa51be71009ef67b16046c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
             },
             "suggest": {
                 "ext-symfony_debug": ""
@@ -857,29 +957,79 @@
                 "debug",
                 "dump"
             ],
-            "time": "2015-07-28 15:18:12"
+            "time": "2015-10-25 17:17:38"
         },
         {
-            "name": "twig/twig",
-            "version": "v1.20.0",
+            "name": "symfony/yaml",
+            "version": "v2.7.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twigphp/Twig.git",
-                "reference": "1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844"
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "eca9019c88fbe250164affd107bc8057771f3f4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844",
-                "reference": "1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/eca9019c88fbe250164affd107bc8057771f3f4d",
+                "reference": "eca9019c88fbe250164affd107bc8057771f3f4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-10-11 09:39:48"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.23.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
+                "reference": "d9b6333ae8dd2c8e3fd256e127548def0bc614c6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.7"
             },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.20-dev"
+                    "dev-master": "1.23-dev"
                 }
             },
             "autoload": {
@@ -914,15 +1064,12 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-08-12 15:56:39"
+            "time": "2015-11-05 12:49:06"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "fastd/fastd-module": 20,
-        "fastd/asset-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
