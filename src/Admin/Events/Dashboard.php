@@ -14,7 +14,7 @@
 
 namespace Admin\Events;
 
-class Dashboard extends DashAuthorization
+class Dashboard extends Authorization
 {
     public function indexAction()
     {

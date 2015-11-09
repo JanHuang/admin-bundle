@@ -18,7 +18,7 @@ use FastD\Http\JsonResponse;
 use FastD\Http\Request;
 use FastD\Http\Response;
 
-class Logout extends DashAuthorization
+class Logout extends Authorization
 {
     public function signOutAction(Request $request)
     {

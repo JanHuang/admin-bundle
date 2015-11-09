@@ -16,7 +16,7 @@ namespace Admin\Events;
 
 use FastD\Http\Request;
 
-class Manager extends DashAuthorization
+class Manager extends Authorization
 {
     public function profileAction()
     {
