@@ -1,5 +1,7 @@
 <?php 
 
+Routes::get('/dash/admin/login', 'Admin\\Events\\Login@loginAction');
+
 Routes::group('/admin', function () {
     Routes::get(['/login', 'name' => 'dash_admin_login'], 'Admin\\Events\\Login@loginAction');
 
