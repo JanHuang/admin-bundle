@@ -74,5 +74,3 @@ class Authorization extends TemplateEvent
         return false !== ($roles = json_decode($this->user['roles'], true)) ? $roles : $this->user['roles'];
     }
 }
-
-class_alias('Admin\Events\Authorization', 'Admin\Events\DashAuthorization');
