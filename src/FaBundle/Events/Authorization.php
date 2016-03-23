@@ -38,7 +38,7 @@ class Authorization extends TemplateEvent
                     'msg' => 'Access denied.',
                 ], Response::HTTP_FORBIDDEN);
             }
-            return $this->redirect($this->generateUrl('dash_admin_login'));
+            return $this->redirect($this->generateUrl($this->getParameters('admin-bundle.fail_url')));
         }
 
         $this->user = $request->getSession('manager');
