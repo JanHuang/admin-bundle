@@ -12,7 +12,7 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace Admin\Events;
+namespace FaBundle\Events;
 
 use FastD\Framework\Events\TemplateEvent;
 use FastD\Http\JsonResponse;

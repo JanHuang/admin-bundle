@@ -12,10 +12,10 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace AdminBundle\Events;
+namespace FaBundle\Events;
 
-use AdminBundle\Services\Signature;
-use AdminBundle\Std\User\UserInterface;
+use FaBundle\Services\Signature;
+use FaBundle\Std\User\UserInterface;
 use FastD\Debug\Exceptions\ServerInternalErrorException;
 use FastD\Framework\Events\RestEvent;
 use FastD\Http\JsonResponse;
@@ -25,7 +25,7 @@ use FastD\Http\Response;
 /**
  * Class Login
  *
- * @package AdminBundle\Events
+ * @package FaBundle\Events
  */
 class Login extends RestEvent
 {
@@ -90,7 +90,7 @@ class Login extends RestEvent
         unset($repository, $connection);
 
         if (!($managerRepository instanceof UserInterface)) {
-            throw new ServerInternalErrorException('Repository implements extends "AdminBundle\\Repository\\AdminInterface');
+            throw new ServerInternalErrorException(sprintf('Repository implements extends ["%s"]', UserInterface::class));
         }
 
         $manager = $managerRepository->find([

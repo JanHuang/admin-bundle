@@ -12,7 +12,7 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace AdminBundle\Std\User;
+namespace FaBundle\Std\User;
 
 /**
  * Interface UserInterface

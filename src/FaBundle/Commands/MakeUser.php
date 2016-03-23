@@ -12,15 +12,15 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace AdminBundle\Commands;
+namespace FaBundle\Commands;
 
-use AdminBundle\Std\User\UserInterface;
+use FaBundle\Std\User\UserInterface;
 use FastD\Console\Command;
+use FaBundle\Services\Signature;
 use FastD\Console\IO\Input;
 use FastD\Console\IO\Output;
 use FastD\Debug\Exceptions\ServerInternalErrorException;
 use FastD\Framework\Events\BaseEvent;
-use AdminBundle\Services\Signature;
 
 /**
  * 生成管理用户

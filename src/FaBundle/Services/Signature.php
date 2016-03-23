@@ -12,7 +12,7 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace AdminBundle\Services;
+namespace FaBundle\Services;
 
 class Signature
 {
