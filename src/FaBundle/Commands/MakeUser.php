@@ -96,7 +96,7 @@ class MakeUser extends Command
         $salt = $this->getSalt($input);
         $email = $this->getEmail($input);
 
-        $password = Signature::instance([$username, $pwd], $salt)->toMd5();
+        $password = Signature::instance([$username, $pwd], UserInterface::SALT)->toMd5();
         $container = $this->getContainer();
         $event = new BaseEvent();
         $event->setContainer($container);
