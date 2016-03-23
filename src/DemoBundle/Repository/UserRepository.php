@@ -14,7 +14,7 @@
 
 namespace DemoBundle\Repository;
 
-use AdminBundle\Std\User\UserInterface;
+use FaBundle\Std\User\UserInterface;
 use FastD\Database\Repository\Repository;
 
 class UserRepository extends Repository implements UserInterface

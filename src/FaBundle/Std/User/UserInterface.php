@@ -17,7 +17,7 @@ namespace FaBundle\Std\User;
 /**
  * Interface UserInterface
  *
- * @package AdminBundle\Std\User
+ * @package FaBundle\Std\User
  */
 interface UserInterface
 {

@@ -88,7 +88,7 @@ class Login extends RestEvent
         $connection = $this->getParameters('admin-bundle.connection');
         $managerRepository = $this->getConnection($connection)->getRepository($repository);
         unset($repository, $connection);
-
+        
         if (!($managerRepository instanceof UserInterface)) {
             throw new ServerInternalErrorException(sprintf('Repository implements extends ["%s"]', UserInterface::class));
         }
