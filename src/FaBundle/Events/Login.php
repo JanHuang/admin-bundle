@@ -122,7 +122,7 @@ class Login extends RestEvent
             return $this->redirect($redirectUrl);
         }
 
-        unset($manager['pwd']);
+        unset($manager[$managerRepository->getPasswordField()]);
         $request->setSession('manager', $manager);
 
         if ($request->isXmlHttpRequest()) {
