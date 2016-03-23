@@ -46,39 +46,9 @@ class Authorization extends TemplateEvent
         return true;
     }
 
-    protected function getUserId()
-    {
-        return isset($this->user['id']) ? $this->user['id'] : null;
-    }
-
-    protected function getUser()
+    public function getUser()
     {
         return $this->user;
-    }
-
-    protected function getUsername()
-    {
-        return isset($this->user['username']) ? $this->user['username'] : null;
-    }
-
-    protected function getNickname()
-    {
-        return isset($this->user['nickname']) ? $this->user['nickname'] : null;
-    }
-
-    protected function getEmail()
-    {
-        return isset($this->user['email']) ? $this->user['email'] : null;
-    }
-
-    protected function getAvatar()
-    {
-        return isset($this->user['avatar']) ? $this->user['avatar'] : null;
-    }
-
-    protected function getRoles()
-    {
-        return false !== ($roles = json_decode($this->user['roles'], true)) ? $roles : $this->user['roles'];
     }
 
     public function render($template, array $parameters = array())

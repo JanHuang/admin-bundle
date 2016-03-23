@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin;
+namespace AdminBundle;
 
 use FastD\Framework\Bundle;
 

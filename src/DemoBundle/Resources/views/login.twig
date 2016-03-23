@@ -1,0 +1,6 @@
+<form action="{{ url('admin_bundle_login') }}" method="post">
+    <input type="text" name="_username">
+    <input type="password" name="_password">
+    <input type="hidden" name="redirect_url" value="{{ url('/login') }}">
+    <button type="submit">提交</button>
+</form>

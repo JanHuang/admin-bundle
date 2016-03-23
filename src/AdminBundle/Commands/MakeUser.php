@@ -12,16 +12,23 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace Admin\Commands;
+namespace AdminBundle\Commands;
 
-use Admin\Repository\UserRepositoryInterface;
-use Admin\Services\Signature;
+use AdminBundle\Std\User\UserInterface;
 use FastD\Console\Command;
 use FastD\Console\IO\Input;
 use FastD\Console\IO\Output;
 use FastD\Debug\Exceptions\ServerInternalErrorException;
 use FastD\Framework\Events\BaseEvent;
+use AdminBundle\Services\Signature;
 
+/**
+ * 生成管理用户
+ *
+ * Class MakeUser
+ *
+ * @package Admin\Commands
+ */
 class MakeUser extends Command
 {
     const STR = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
@@ -89,32 +96,35 @@ class MakeUser extends Command
         $salt = $this->getSalt($input);
         $email = $this->getEmail($input);
 
-        $signature = new Signature();
-        $password = $signature->makeMd5Password($username, $pwd, $salt);
+        $password = Signature::instance([$username, $pwd], $salt)->toMd5();
         $container = $this->getContainer();
         $event = new BaseEvent();
         $event->setContainer($container);
 
         try {
-            $repository = $event->getParameters('admin_bundle.repository');
-            $connection = $event->getParameters('admin_bundle.connection');
+            $repository = $event->getParameters('admin-bundle.repository');
+            $connection = $event->getParameters('admin-bundle.connection');
             $managerRepository = $event->getConnection($connection)->getRepository($repository);
-            unset($repository, $connection);
         } catch (\Exception $e) {
             throw new ServerInternalErrorException('Admin bundle is unconfiguration. Parameters "redirect_url", "repository", "connection"');
         }
 
-        if (!($managerRepository instanceof UserRepositoryInterface)) {
-            throw new ServerInternalErrorException('Repository implements extends "Admin\\Repository\\AdminInterface');
+        if (!($managerRepository instanceof UserInterface)) {
+            throw new ServerInternalErrorException(sprintf('Repository implements extends "[%s]"', UserInterface::class));
         }
 
-        if (false != ($user = $managerRepository->getUser($username))) {
+        $result = $managerRepository
+            ->getConnection()
+            ->createQuery('select count(1) as total from ' . $managerRepository->getTable() . ' where ' . $managerRepository->getUsernameField() . ' = \'' . $username . '\'')
+            ->getQuery()
+            ->getOne('total')
+        ;
+
+        if ($result > 0) {
             $output->writeln(sprintf('User "%s" is exists.', $user[$managerRepository->getUsernameField()]), Output::STYLE_BG_INFO);
             $output->writeln($managerRepository->getUsernameField() . ': ' . $user[$managerRepository->getUsernameField()], Output::STYLE_SUCCESS);
             $output->writeln($managerRepository->getPasswordField() . ': ' . $user[$managerRepository->getPasswordField()], Output::STYLE_SUCCESS);
             $output->writeln($managerRepository->getEmailField() . ': ' . $user[$managerRepository->getEmailField()], Output::STYLE_SUCCESS);
-            $output->writeln($managerRepository->getSaltField() . ': ' . $user[$managerRepository->getSaltField()], Output::STYLE_SUCCESS);
-            $output->writeln($managerRepository->getRolesField() . ': ' . $user[$managerRepository->getRolesField()], Output::STYLE_SUCCESS);
             return 0;
         }
 
@@ -122,8 +132,6 @@ class MakeUser extends Command
             $managerRepository->getUsernameField()  => $username,
             $managerRepository->getEmailField()     => $email,
             $managerRepository->getPasswordField()  => $password,
-            $managerRepository->getSaltField()      => $salt,
-            $managerRepository->getRolesField()     => '["ROLE_USER"]',
         ];
 
         foreach ($data as $key => $value) {
@@ -132,12 +140,10 @@ class MakeUser extends Command
             }
         }
 
-        if ($managerRepository->insert($data)) {
+        if (false !== $managerRepository->insert($data)) {
             $output->writeln($managerRepository->getUsernameField() . ': ' . $username, Output::STYLE_SUCCESS);
             $output->writeln($managerRepository->getPasswordField() . ': ' . $pwd, Output::STYLE_SUCCESS);
             $output->writeln($managerRepository->getEmailField() . ': ' . $email, Output::STYLE_SUCCESS);
-            $output->writeln($managerRepository->getSaltField() . ': ' . $salt, Output::STYLE_SUCCESS);
-            $output->writeln($managerRepository->getRolesField() . ': ' . $salt, Output::STYLE_SUCCESS);
             return 0;
         }
 

@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: janhuang
- * Date: 15/8/17
- * Time: 下午10:44
+ * Date: 16/3/23
+ * Time: 下午5:36
  * Github: https://www.github.com/janhuang
  * Coding: https://www.coding.net/janhuang
  * SegmentFault: http://segmentfault.com/u/janhuang
@@ -12,41 +12,36 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace Admin\Repository;
+namespace DemoBundle\Repository;
 
+use AdminBundle\Std\User\UserInterface;
 use FastD\Database\Repository\Repository;
 
-class DemoRepository extends Repository implements UserRepositoryInterface
+class UserRepository extends Repository implements UserInterface
 {
-    protected $table = 'fastd_manager';
+    protected $table = 'test';
 
-    public function getUser($username)
-    {
-        return $this->find([$this->getUsernameField() => $username]);
-    }
-
+    /**
+     * @return string
+     */
     public function getUsernameField()
     {
         return 'username';
     }
 
+    /**
+     * @return string
+     */
     public function getEmailField()
     {
         return 'email';
     }
 
+    /**
+     * @return string
+     */
     public function getPasswordField()
     {
-        return 'pwd';
-    }
-
-    public function getSaltField()
-    {
-        return 'salt';
-    }
-
-    public function getRolesField()
-    {
-        return 'roles';
+        return 'password';
     }
 }

@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: janhuang
- * Date: 15/8/17
- * Time: 下午10:13
+ * Date: 16/3/23
+ * Time: 下午4:50
  * Github: https://www.github.com/janhuang
  * Coding: https://www.coding.net/janhuang
  * SegmentFault: http://segmentfault.com/u/janhuang
@@ -12,19 +12,29 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace Admin\Repository;
+namespace AdminBundle\Std\User;
 
-interface UserRepositoryInterface
+/**
+ * Interface UserInterface
+ *
+ * @package AdminBundle\Std\User
+ */
+interface UserInterface
 {
-    public function getUser($username);
+    const SALT = '!@#**%^#)#@$(>N';
 
+    /**
+     * @return string
+     */
     public function getUsernameField();
 
+    /**
+     * @return string
+     */
     public function getEmailField();
 
+    /**
+     * @return string
+     */
     public function getPasswordField();
-
-    public function getSaltField();
-
-    public function getRolesField();
 }
