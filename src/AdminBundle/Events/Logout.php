@@ -17,11 +17,21 @@ namespace Admin\Events;
 use FastD\Http\JsonResponse;
 use FastD\Http\Request;
 use FastD\Http\Response;
+use FastD\Debug\Exceptions\ServerInternalErrorException;
 
 class Logout extends Authorization
 {
     public function signOutAction(Request $request)
     {
+        try {
+            $redirectUrl = $this->generateUrl($this->getParameters('admin-bundle.logout_url'));
+        } catch (\Exception $e) {
+            if (!$request->request->has('redirect_url')) {
+                throw new ServerInternalErrorException('redirect_url unconfiguration.');
+            }
+            $redirectUrl = $request->request->get('logout_url');
+        }
+
         $request->clearSession('manager');
         if ($request->hasSession('manager')) {
             if ($request->isXmlHttpRequest()) {
@@ -30,7 +40,7 @@ class Logout extends Authorization
                     'msg' => 'Operation fail.'
                 ], Response::HTTP_BAD_REQUEST);
             }
-            return $this->redirect($this->generateUrl('dash_admin_board'));
+            return $this->redirect($redirectUrl);
         }
 
         if ($request->isXmlHttpRequest()) {
@@ -38,6 +48,6 @@ class Logout extends Authorization
                 'msg' => 'ok'
             ]);
         }
-        return $this->redirect($this->generateUrl('dash_admin__login'));
+        return $this->redirect($redirectUrl);
     }
 }

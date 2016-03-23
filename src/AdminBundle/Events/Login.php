@@ -69,13 +69,19 @@ class Login extends RestEvent
             return $user;
         }
 
+        $referer = $request->header->hasGet('REFERER', null);
+
+        if (!$request->isXmlHttpRequest() && null === $referer) {
+            throw new \RuntimeException('Access denied.');
+        }
+
         try {
-            $redirectUrl = $this->generateUrl($this->getParameters('admin-bundle.redirect_url'));
+            $redirectUrl = $this->generateUrl($this->getParameters('admin-bundle.login_url'));
         } catch (\Exception $e) {
-            if (!$request->request->has('redirect_url')) {
+            if (!$request->request->has('login_url')) {
                 throw new ServerInternalErrorException('redirect_url unconfiguration.');
             }
-            $redirectUrl = $request->request->get('redirect_url');
+            $redirectUrl = $request->request->get('login_url');
         }
 
         $repository = $this->getParameters('admin-bundle.repository');
@@ -94,14 +100,14 @@ class Login extends RestEvent
             ]
         ]);
 
-        if (false == $manager) {
+        if (empty($manager)) {
             if ($request->isXmlHttpRequest()) {
                 return new JsonResponse([
                     'code' => 10086,
                     'msg' => 'Access denied.'
                 ], Response::HTTP_FORBIDDEN);
             }
-            return $this->redirect($redirectUrl);
+            return $this->redirect($referer);
         }
 
         $sign = Signature::instance($user, $managerRepository::SALT)->toMd5();
